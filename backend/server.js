@@ -13,7 +13,7 @@ const server = require('http').createServer(app);
 const { ACTIONS } = require('./actions');
 const io = require('socket.io')(server, {
 	cors: {
-		origin: 'https://deft-chimera-504b15.netlify.ap',
+		origin: 'https://talkspacee.netlify.app/',
 		methods: ['GET', 'POST']
 	}
 });
@@ -22,7 +22,7 @@ app.use(cookieParser());
 
 const corsOption = {
 	credentials: true,
-	origin: ['https://deft-chimera-504b15.netlify.ap']
+	origin: ['hhttps://talkspacee.netlify.app/']
 };
 
 app.use(cors(corsOption));
