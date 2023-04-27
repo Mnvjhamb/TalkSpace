@@ -13,7 +13,7 @@ const server = require('http').createServer(app);
 const { ACTIONS } = require('./actions');
 const io = require('socket.io')(server, {
 	cors: {
-		origin: 'http://localhost:3000',
+		origin: 'https://deft-chimera-504b15.netlify.ap',
 		methods: ['GET', 'POST']
 	}
 });
@@ -22,7 +22,7 @@ app.use(cookieParser());
 
 const corsOption = {
 	credentials: true,
-	origin: ['http://localhost:3000']
+	origin: ['https://deft-chimera-504b15.netlify.ap']
 };
 
 app.use(cors(corsOption));
