@@ -1,0 +1,42 @@
+import React, {useState} from 'react'
+import Card from '../../../components/shared/Card/Card'
+import Button from '../../../components/shared/Button/Button'
+
+import styles from './StepPhoneEmail.module.css'
+
+import Phone from './Phone/Phone';
+import Email from './Email/Email';
+
+const phoneEmailMap = {
+  phone: Phone,
+  email: Email
+}
+
+export default function StepPhoneEmail({onNext}) {
+
+  const [type, setType] = useState('phone');
+  const Component = phoneEmailMap[type];
+
+  return (
+    <>
+
+      <div className={styles.cardWrapper}>
+        <div>
+          
+          <div className={styles.buttonWrap}>
+            <button className={`${styles.tabButton} ${type === 'phone' ? styles.active : ''}` } onClick={() => setType('phone')}>
+              <img src="/images/phone-white.png" alt="phone" />
+            </button>
+            <button className={`${styles.tabButton} ${type === 'email' ? styles.active : ''}` } onClick={() => setType('email')}>
+              <img src="/images/mail-white.png" alt="mail" />
+            </button>
+          </div>
+
+          <Component onNext={onNext}/>
+        
+        </div>
+      </div>
+
+    </>
+  )
+}
