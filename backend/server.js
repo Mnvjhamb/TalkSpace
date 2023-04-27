@@ -22,7 +22,7 @@ app.use(cookieParser());
 
 const corsOption = {
 	credentials: true,
-	origin: ['hhttps://talkspacee.netlify.app/']
+	origin: ['https://talkspacee.netlify.app/']
 };
 
 app.use(cors(corsOption));
