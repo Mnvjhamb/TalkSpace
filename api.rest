@@ -15,3 +15,10 @@ content-type: application/json
     "hash": "8129c9af64c4cda25214c4e2b3e2133a1f5c39ad89e33a6a82fbacb787286365.1673615486586",
     "phone": "+919463240230"
 }
+###
+GET https://talkspace-backend.onrender.com/api/rooms HTTP/1.1
+Content-Type: application/json
+###
+GET http://localhost:5500/api/send-otp HTTP/1.1
+Content-Type: application/json
+
